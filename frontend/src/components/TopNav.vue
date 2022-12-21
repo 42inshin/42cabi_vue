@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-const locations = ref(["새롬관", "서초"]);
+const locations = ["새롬관", "서초"];
 const locationName = ref("새롬관");
 const locationClicked = ref(false);
 const locationOptionHandler = (index: number) => {
-  locationName.value = locations.value[index];
+  locationName.value = locations[index];
   locationClicked.value = false;
 };
 </script>
@@ -19,11 +19,13 @@ const locationOptionHandler = (index: number) => {
           locationName
         }}</span>
         <ul v-if="locationClicked" class="optionList">
-          <li @click="locationOptionHandler(0)" class="optionItem">
-            {{ locations[0] }}
-          </li>
-          <li @click="locationOptionHandler(1)" class="optionItem">
-            {{ locations[1] }}
+          <li
+            v-for="(location, i) in locations"
+            :key="i"
+            @click="locationOptionHandler(i)"
+            class="optionItem"
+          >
+            {{ location }}
           </li>
         </ul>
       </div>
