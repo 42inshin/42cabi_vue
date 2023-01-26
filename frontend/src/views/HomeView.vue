@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import TopNav from "@/components/TopNav.vue";
+import LeftNav from "@/components/LeftNav.vue";
 </script>
 
 <template>
   <TopNav />
+  <LeftNav />
   <div>Home View</div>
 </template>
 

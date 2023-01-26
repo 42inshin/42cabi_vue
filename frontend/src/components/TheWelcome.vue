@@ -85,7 +85,7 @@ import { RouterLink, RouterView } from "vue-router";
 .loginCard {
   width: 350px;
   height: 500px;
-  background-color: var(--white-color);
+  background-color: var(--white);
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -18,7 +18,7 @@ const locationOptionHandler = (index: number) => {
         <span @click="locationClicked = !locationClicked">{{
           locationName
         }}</span>
-        <ul v-if="locationClicked" class="optionList">
+        <ul v-show="locationClicked" class="optionList">
           <li
             v-for="(location, i) in locations"
             :key="i"
@@ -41,7 +41,7 @@ const locationOptionHandler = (index: number) => {
   align-items: center;
   background-color: var(--main-color);
   padding: 0 20px;
-  color: var(--white-color);
+  color: var(--white);
   height: 80px;
 }
 .logo {
@@ -74,7 +74,7 @@ const locationOptionHandler = (index: number) => {
   top: 30px;
   left: -15px;
   padding: 5px 10px;
-  background: var(--white-color);
+  background: var(--white);
   opacity: 0.8;
   border-radius: 4px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
@@ -83,7 +83,7 @@ const locationOptionHandler = (index: number) => {
   width: 80px;
   height: 40px;
   color: var(--main-color);
-  background: var(--white-color);
+  background: var(--white);
   line-height: 40px;
   text-indent: 5px;
 }
